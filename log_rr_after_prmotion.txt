@@ -1,0 +1,91 @@
+Script started on 2024-01-29 19:49:41+01:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="170" LINES="63"]
+[?2004h]0;mimo@mimo-XPS: ~[01;32mmimo@mimo-XPS[00m:[01;34m~[00m$ [7mssh -i ".udacity/miro-udacity.pem" ec2-user@ec2-54-184-32-5.us-west-2.compute.amazonaws.com[27m
+
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cssh -i ".udacity/miro-udacity.pem" ec2-user@ec2-54-184-32-5.us-west-2.compute.amazonaws.com
+
+[A
+[?2004l
+
+Last login: Mon Jan 29 18:45:34 2024 from 194.93.185.133
+
+   ,     #_
+   ~\_  ####_        Amazon Linux 2
+  ~~  \_#####\
+  ~~     \###|       AL2 End of Life is 2025-06-30.
+  ~~       \#/ ___
+   ~~       V~' '->
+    ~~~         /    A newer version of Amazon Linux is available!
+      ~~._.   _/
+         _/ _/       Amazon Linux 2023, GA and supported until 2028-03-15.
+       _/m/'           https://aws.amazon.com/linux/amazon-linux-2023/
+
+]0;ec2-user@ip-10-2-10-11:~[?1034h[ec2-user@ip-10-2-10-11 ~]$ 
+]0;ec2-user@ip-10-2-10-11:~[ec2-user@ip-10-2-10-11 ~]$ mysql -u admin -p -h read-replica.c8usti9dyzcy.us-west-2.rds.amazonaws.com
+Enter password: 
+(B[0;1mWelcome to the MariaDB monitor.  Commands end with ; or \g.
+(B[m(B[0;1mYour MySQL connection id is 9
+Server version: 8.0.35 Source distribution
+
+(B[m(B[0;1mCopyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+(B[m(B[0;1mType 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+(B[m[?1034hMySQL [(none)]> SHIQ [K[K[KOW DATABAES[K[KSES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| udacity            |
++--------------------+
+(B[0;1m5 rows in set (0.01 sec)
+(B[m(B[0;1m
+(B[mMySQL [(none)]> USE UDACITY[K[K[K[K[K[K[K[Kudacity[C udacity[C[C[C[C[C[C[C;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+(B[0;1mDatabase changed
+(B[mMySQL [udacity]> SHOW TABLES;
++-------------------+
+| Tables_in_udacity |
++-------------------+
+| pet               |
++-------------------+
+(B[0;1m1 row in set (0.01 sec)
+(B[m(B[0;1m
+(B[mMySQL [udacity]> SELECT * FROM pet;
++---------+-------+
+| name    | owner |
++---------+-------+
+| Udacity | Miro  |
++---------+-------+
+(B[0;1m1 row in set (0.00 sec)
+(B[m(B[0;1m
+(B[mMySQL [udacity]> INSERT INTO pet
+    ->     VALUES ('RABBIT','BUNNY');
+(B[0;1mQuery OK, 1 row affected (0.00 sec)
+(B[m(B[0;1m
+(B[mMySQL [udacity]> INSERT INTO pet     VALUES ('RABBIT','BUNNY');
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[16P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[15PINSERT INTO petSELECT * FROM pet;
++---------+-------+
+| name    | owner |
++---------+-------+
+| Udacity | Miro  |
+| RABBIT  | BUNNY |
++---------+-------+
+(B[0;1m2 rows in set (0.00 sec)
+(B[m(B[0;1m
+(B[mMySQL [udacity]> EXIT
+(B[0;1mBye
+(B[m]0;ec2-user@ip-10-2-10-11:~[ec2-user@ip-10-2-10-11 ~]$ ECIT[K[K[K[Kexit
+logout
+Connection to ec2-54-184-32-5.us-west-2.compute.amazonaws.com closed.
+
+[?2004h]0;mimo@mimo-XPS: ~[01;32mmimo@mimo-XPS[00m:[01;34m~[00m$ exit
+[?2004l
+exit
+
+Script done on 2024-01-29 19:52:15+01:00 [COMMAND_EXIT_CODE="0"]

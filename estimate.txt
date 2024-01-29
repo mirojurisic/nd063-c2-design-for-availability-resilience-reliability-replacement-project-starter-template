@@ -1,0 +1,6 @@
+
+RTO for a single AZ is around 5 minutes. All processes are automatic.
+RTO for a single region is  20 minutes. There is a manual process needed.
+RPO for a single AZ is 8 minutes.
+RPO for a single region 30 minutes.
+These are just my estimates.
