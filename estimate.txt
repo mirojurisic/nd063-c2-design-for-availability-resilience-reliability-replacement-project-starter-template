@@ -1,6 +1,7 @@
+# Single AZ
+RTO for a single AZ is between 1 and 3 minutes if the MulitAZ is turned on. Data are synchronized in stand-by AZ. Amazon RDS makes the switch automatically. Application needs to set up so that DNS change of DB does not affect its functionality.
+RPO for a single AZ is 0 minute, because the data are in sync.
 
-RTO for a single AZ is around 5 minutes. All processes are automatic.
-RTO for a single region is  20 minutes. There is a manual process needed.
-RPO for a single AZ is 8 minutes.
-RPO for a single region 30 minutes.
-These are just my estimates.
+# Single Region
+RTO for a single region is less than an hour if multi region replication is turned on and we are taking into consideration that alarms and monitoring are done properly. This estimate can change based on the volume of data, communication between regions ... There are manual processes needed. For example, promote the replica to primary DB, redirect data from the application to the new primary url, checking is there any transaction between old primary and new primary in progress. 
+RPO for a single region depends on the data frequency. If we are taking about the low-traffic period during shutdown, it can be as low as zero. I would estimate here around 20 min on average. 
